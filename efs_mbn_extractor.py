@@ -254,7 +254,7 @@ def main():
     os.makedirs(outdir, exist_ok=True)
 
     try:
-        MbnExtractor.extract(input_path, outdir, no_extra, logger=logger)
+        MbnExtractor.extract(input_path, outdir, args.no_extra, logger=logger)
         logger.info("Extraction finished.")
     except MbnExtractorException as me:
         logger.error("Extraction failed: %s", me)
